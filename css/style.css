@@ -1,0 +1,87 @@
+
+
+
+*{
+    margin: auto;
+    background-color: beige;
+}
+
+.page{
+    max-width: 100%;
+    max-height: 100%;
+}
+.btn1{
+    max-width: 100%;
+    max-height: 100%;
+}
+.user-side{
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 400px;
+}
+.header{
+    text-align: center;
+    height: 70px;
+    font-size: 75px;
+    margin-top: 0em;
+}
+.info{
+    font-size: 40px;
+    margin-top: none;
+}
+.input-box{
+    margin-top: 10px;
+}
+textarea{
+    background-color: white;
+    font-size: larger;
+    max-height: 300px;
+    max-width: 1000px;
+    padding: none;
+    min-width: 1000px;
+    min-height: 300px;
+}
+.slider{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+    width: 70%;
+    max-height: 100%;
+    margin-bottom: 50px;
+    grid-template-columns: auto auto auto auto auto;
+}
+.slid{
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+.sliders{
+    margin-top: 5px;
+}
+.info1{
+    font-size: larger;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.btns{
+    margin-top: 30px;
+}
+button{
+    height: 30px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border-bottom: none;
+    border-right: none;
+    outline: none;
+    cursor: pointer;
+}
