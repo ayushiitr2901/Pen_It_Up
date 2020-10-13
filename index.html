@@ -11,6 +11,7 @@
 	<script src="js/three.r119.min.js"></script>
 	<script src="js/vanta.fog.min.js"></script>
 	<script src="js/vanta.net.min.js"></script>
+	<script src="js/vanta.truck.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 
@@ -61,36 +62,144 @@
 		<div class="nav__content">
 		  <ul class="nav__items">
 			<li class="nav__item">
-			  <span class="nav__item-text">
-				Ink-Color
+			  <div><span class="nav__item-text">
+				<button class="nav_butt" id="butt1">Ink-Color</button>
+				
 			  </span>
+			 
+			  </div>
+			  
 			</li>
 			<li class="nav__item">
-			  <span class="nav__item-text">
-				Font-Style
+			  <div><span class="nav__item-text">
+				<button class="nav_butt" id="butt2">Font-Style</button>
 			  </span>
+			  </div>
 			</li>
 			<li class="nav__item">
-			  <span class="nav__item-text">
-				Page-Style
+			  <div><span class="nav__item-text">
+				<button class="nav_butt" id="butt3">Page-Style</button>
 			  </span>
+			  </div>
 			</li>
 			<li class="nav__item">
-			  <span class="nav__item-text">
-				Font-Size
+			  <div><span class="nav__item-text">
+				<button class="nav_butt" id="butt4">Font-Size</button>
 			  </span>
+			  </div>
 			</li>
 		  </ul>
 		</div>
-		<label class="nav__btn" for="menu-cb"></label>
+		<label class="nav__btn" for="menu-cb" id="nav_cross_btt"></label>
 	  </nav>
+	  <div id="menu-content1">
+		<a class="links" href="#" style="color: black;" onmouseover="this.style.color='white';" onmouseout="this.style.color='black';">Black</a>
+		<a class="links" href="#" style="color: blue;" onmouseover="this.style.color='white';" onmouseout="this.style.color='blue';">Blue</a>
+		<a class="links" href="#" style="color: red;" onmouseover="this.style.color='white';" onmouseout="this.style.color='red';">Red</a>
+		<a class="links" href="#" style="color: green;" onmouseover="this.style.color='white';" onmouseout="this.style.color='green';">Green</a>
 	  </div>
+	  <div id="menu-content2">
+		<a class="links" href="#">Contact Us</a>
+		<a class="links" href="#">Visit Us</a>
+		<a class="links" href="#">About Us</a>
+	  </div>
+	  <div id="menu-content3">
+		<a class="links" href="#">Contact Us</a>
+		<a class="links" href="#">Visit Us</a>
+		<a class="links" href="#">About Us</a>
+	  </div>
+	  <div id="menu-content4">
+		<a class="links" href="#">Contact Us</a>
+		<a class="links" href="#">Visit Us</a>
+		<a class="links" href="#">About Us</a>
+	  </div>
+	  </div>
+
+	  <script>
+		let dropdownBtn1 = document.getElementById("butt1");
+		let dropdownBtn2 = document.getElementById("butt2");
+		let dropdownBtn3 = document.getElementById("butt3");
+		let dropdownBtn4 = document.getElementById("butt4");
+
+		let menuContent1 = document.getElementById("menu-content1");
+		let menuContent2 = document.getElementById("menu-content2");
+		let menuContent3 = document.getElementById("menu-content3");
+		let menuContent4 = document.getElementById("menu-content4");
+
+		let crossContent = document.getElementById("nav_cross_btt");
+		
+		dropdownBtn1.addEventListener('click',()=>{
+		   if(menuContent1.style.display===""){
+			  menuContent1.style.display="block";
+		   } else {
+			  menuContent1.style.display="";
+		   }
+
+		   menuContent2.style.display="";
+		   menuContent3.style.display="";
+		   menuContent4.style.display="";
+		})
+
+		dropdownBtn2.addEventListener('click',()=>{
+		   if(menuContent2.style.display===""){
+			  menuContent2.style.display="block";
+		   } else {
+			  menuContent2.style.display="";
+		   }
+
+		   menuContent1.style.display="";
+		   menuContent3.style.display="";
+		   menuContent4.style.display="";
+		})
+
+		dropdownBtn3.addEventListener('click',()=>{
+		   if(menuContent3.style.display===""){
+			  menuContent3.style.display="block";
+		   } else {
+			  menuContent3.style.display="";
+		   }
+
+		   menuContent2.style.display="";
+		   menuContent1.style.display="";
+		   menuContent4.style.display="";
+		})
+
+		dropdownBtn4.addEventListener('click',()=>{
+		   if(menuContent4.style.display===""){
+			  menuContent4.style.display="block";
+		   } else {
+			  menuContent4.style.display="";
+		   }
+
+		   menuContent2.style.display="";
+		   menuContent3.style.display="";
+		   menuContent1.style.display="";
+		})
+
+		crossContent.addEventListener('click',()=>{
+		  
+		   menuContent4.style.display="";
+		   menuContent2.style.display="";
+		   menuContent3.style.display="";
+		   menuContent1.style.display="";
+		})
+
+
+
+		</script>
 
 </section>
 
 
+<section class="output" id="output1">
 
-<section class="output">
+	<!-- <div id='stars'></div>
+	<div id='stars2'></div>
+	<div id='stars3'></div> -->
+
+
+
+
 
 	<section class="edit-menu">
 		<div class="option">
@@ -128,8 +237,33 @@
 		<canvas class="final-doc"></canvas>
 	</div>
 
+	<div class="footer" id="foot">
+		<div class="menu_bottom">
+			<div class="lines"></div>
+
+			<ul class="list_bottom">
+				<a href="#" class="li11"><li class="li1">About</li></a>
+				<a href="#" class="li11"><li class="li1">Contact Us</li></a>
+  				<li class="li2">Thanks for Visiting!</li>
+			</ul>
+
+		</div>
+	</div>
 </section>
-<div class="footer"></div>
+
+<script>
+	VANTA.RINGS({
+		el: "#foot",
+ 		mouseControls: true,
+  		touchControls: true,
+  		gyroControls: false,
+  		minHeight: 200.00,
+  		minWidth: 200.00,
+  		scale: 1.00,
+  		scaleMobile: 1.00,
+  		backgroundColor: 0x23153c
+	})
+	</script>
 
 </body>
 </html>
