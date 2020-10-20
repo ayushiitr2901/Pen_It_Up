@@ -8,6 +8,9 @@
 	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Cute Font' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+
+	<link href="https://db.onlinewebfonts.com/c/5a7f8e143dbda0b26952bc287ad05cc4?family=Monument+Extended+Light" rel="stylesheet" type="text/css"/>
+	<!-- <link href="https://db.onlinewebfonts.com/c/9b310b2d91dfaf3b73ac6ea66c8351b2?family=Monument+Extended+Ultralight" rel="stylesheet" type="text/css"/> -->
 	<script src="js/three.r119.min.js"></script>
 	<script src="js/vanta.fog.min.js"></script>
 	<script src="js/vanta.net.min.js"></script>
@@ -113,6 +116,29 @@
 		<a class="links" href="#">Visit Us</a>
 		<a class="links" href="#">About Us</a>
 	  </div>
+
+
+
+	  
+	  <div class="auto_option">
+		<div id="toggle_tag"><h1>Automatic Adjust:</h1></div>
+		<div id="container">
+			<div class="toggle">
+			  <input type="checkbox" name="toggle" class="check-checkbox" id="mytoggle" checked>
+			  <label class="check-label" for="mytoggle">
+				<div id="background"></div>
+				<span class="face">
+				  <span class="face-container">
+					<span class="eye left"></span>
+					<span class="eye right"></span>
+					<span class="mouth"></span>
+				  </span>
+				</span>
+			  </label>
+			</div>
+		  </div>
+	  </div>
+	  
 	  </div>
 
 	  <script>
@@ -191,45 +217,139 @@
 </section>
 
 
+<div class="drawer">
+	
+<div class="range_container" id="range-container-id">
+
+<div class="range_heading_flex" id="range121">
+<div class="range">
+	<div class="sliderValue">
+	  <span id="span11" style="left: 10px;"><p style="margin-left: 20px;">100</p></span>
+	</div>
+	<div class="field">
+	  <div class="value left">
+		0</div>	
+	<input type="range" min="10" max="200" value="100" steps="1" id="slide11">
+	  <div class="value right">
+		200</div>
+	</div>
+</div>
+<h3>Line Spacing</h3>
+</div>
+
+<div class="range_heading_flex" id="range122">
+<div class="range">
+	<div class="sliderValue">
+	  <span id="span12" style="left: 10px;"><p style="margin-left: 20px;">100</p></span>
+	</div>
+	<div class="field">
+	  <div class="value left">
+		0</div>	
+	<input type="range" min="10" max="200" value="100" steps="1" id="slide12">
+	  <div class="value right">
+		200</div>
+	</div>
+</div>
+<h3>Adjust X-axis</h3>
+</div>
+
+
+<div class="range_heading_flex" id="range123">
+<div class="range">
+	<div class="sliderValue">
+	  <span id="span13" style="left: 10px;"><p style="margin-left: 20px;">100</p></span>
+	</div>
+	<div class="field">
+	  <div class="value left">
+		0</div>	
+	<input type="range" min="10" max="200" value="100" steps="1" id="slide13">
+	  <div class="value right">
+		200</div>
+	</div>
+</div>
+<h3>Adjust Y-axis</h3>
+</div>
+
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.getElementById("mytoggle");
+  var div11 = document.getElementById("range-container-id");
+  var div12 = document.getElementById("range121");
+  var div13 = document.getElementById("range122");
+  var div14 = document.getElementById("range123");
+
+
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+	  div11.style.height = "0px";
+	  div12.style.display = "none";
+	  div13.style.display = "none";
+	  div14.style.display = "none";
+    } else {
+		div11.style.height = "130px";
+		div12.style.display = "flex";
+	  	div13.style.display = "flex";
+	  	div14.style.display = "flex";
+    }
+  });
+});
+
+</script>
+
+<script>
+  const slideValue = document.getElementById("span11");
+  const inputSlider = document.getElementById("slide11");
+  inputSlider.oninput = (()=>{
+	let value = inputSlider.value;
+	slideValue.textContent = '\xa0\xa0\xa0'  + value;
+	slideValue.style.left = (value/2) + "%";
+	slideValue.classList.add("show");
+  });
+  inputSlider.onblur = (()=>{
+	slideValue.classList.remove("show");
+  });
+
+  const slideValue1 = document.getElementById("span12");
+  const inputSlider1 = document.getElementById("slide12");
+  inputSlider1.oninput = (()=>{
+	let value = inputSlider1.value;
+	slideValue1.textContent = '\xa0\xa0\xa0' + value;
+	slideValue1.style.left = (value/2) + "%";
+	slideValue1.classList.add("show");
+  });
+  inputSlider1.onblur = (()=>{
+	slideValue1.classList.remove("show");
+  });
+
+
+  const slideValue2 = document.getElementById("span13");
+  const inputSlider2 = document.getElementById("slide13");
+  inputSlider2.oninput = (()=>{
+	let value = inputSlider2.value;
+	slideValue2.textContent = '\xa0\xa0\xa0' + value;
+	slideValue2.style.left = (value/2) + "%";
+	slideValue2.classList.add("show");
+  });
+  inputSlider2.onblur = (()=>{
+	slideValue2.classList.remove("show");
+  });
+
+
+</script>
+
+
+
 <section class="output" id="output1">
 
-	<!-- <div id='stars'></div>
-	<div id='stars2'></div>
-	<div id='stars3'></div> -->
-
-
-
-
-
-	<section class="edit-menu">
-		<div class="option">
-			<span class="option-name">Width</span>
-			<input type="range" class="range"  name="" value="0" min="0" max="1000">
-			<span id="rangevalue1" class="rangevalue">0</span>
+	<div class="pages">
+		<div class="user-side">
+			<div class="info"><p>Write Text</p></div>
+			<textarea type="text" name="user-input" id="input-box">	</textarea>
 		</div>
-		<div class="option">
-			<span class="option-name">Width</span>
-			<input type="range" class="rangeslider" name="" value="0" min="0" max="1000" data-rangeslider>
-			<span id="rangevalue1" class="rangevalue">0</span>
-		</div>
-		<div class="option">
-			<span class="option-name">Width</span>
-			<input type="range"  name="" value="0" min="0" max="1000">
-			<span id="rangevalue1" class="rangevalue">0</span>
-		</div>
-		<div class="option">
-			<span class="option-name">Width</span>
-			<input type="range"  name="" value="0" min="0" max="1000">
-			<span id="rangevalue1" class="rangevalue">0</span>
-		</div>
-	</section>
-	
-	<div class="user-side">
-		<div class="info"><p>Write Text</p></div>
-		<textarea type="text" name="user-input" id="input-box">	</textarea>
-	</div>
-	<div class="outp">
-		
 	</div>
 
 
