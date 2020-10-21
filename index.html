@@ -344,17 +344,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <section class="output" id="output1">
-
-	<div class="pages">
-		<div class="user-side">
-			<div class="info"><p>Write Text</p></div>
-			<textarea type="text" name="user-input" id="input-box">	</textarea>
+	<div class="playZone">
+		<div class="pages">
+			<textarea type="text" name="user-input" placeholder = "Write text here...!!!" id="input-box"></textarea>
 		</div>
-	</div>
-
-
-	<div class="letitbex">
-		<canvas class="final-doc"></canvas>
+	
+		<div class="canvasArea">
+			<canvas id = "defaultCanvas0" width="600px" height="500px" style="border: 1px solid black;"></canvas>
+		</div>
 	</div>
 
 	<div class="footer" id="foot">
@@ -370,6 +367,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		</div>
 	</div>
 </section>
+
+<script src = "js/script.js"></script>
 
 <script>
 	VANTA.RINGS({
