@@ -45,8 +45,6 @@
   color: whitesmoke;
 }
 
-
-
 /*heading and top design*/
 
 .square {
@@ -134,9 +132,6 @@
   margin: 0;
 }
 
-
-
-
 /*project introduction and pencil loading */
 
 .intro {
@@ -194,8 +189,6 @@
     left: 0;
   }
 }
-
-
 
 /*options navbar*/
 
@@ -432,9 +425,6 @@
 .nav__cb:checked ~ .nav__btn:after {
   transform: translateY(-7px) rotate(225deg);
 }
-
-
-
 
 /*automatic adjust button and hidden drawer*/
 
@@ -882,8 +872,6 @@
   }
 }
 
-
-
 /*hidden drawer and range sliders*/
 
 .drawer {
@@ -1037,9 +1025,6 @@
   background: #664aff; /*this progress background is only shown on Firefox*/
 }
 
-
-
-
 /*text input and output canvas*/
 
 .output {
@@ -1067,23 +1052,30 @@
 }
 
 #input-box {
+  margin: -10px 0px 0px 16px;
   outline: none;
   padding: 2em;
   font-size: large;
   border-radius: 2%;
-  width: 80%;
+  background-color: hsl(49, 65%, 97%);
+  border: 20px solid #2c014b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 75%;
   height: 40%;
 }
 
 .canvasArea {
   padding: 2em;
 }
-
-
-
+.canvasArea canvas {
+  width: 476px;
+  height: 544px;
+  border: 1px solid #444444;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 /*footer menu and ring design*/
-
 
 .footer {
   height: 95vh;

@@ -1,24 +1,60 @@
+
+//Variable Declarations
+
 var myCan = document.getElementById("defaultCanvas0");
 var ctx = myCan.getContext("2d");
-// var myImg = document.createElement("img");
-var myImg = new Image();
-myImg.setAttribute("src", "assets/paper.png");
-myImg.setAttribute("width", "600");
-myImg.setAttribute("height", "400");
-// document.body.appendChild(myImg);
-window.onload = function() {
-
-    ctx.drawImage(myImg, 0, 0);
-  }
 var myInputBox = document.getElementById("input-box");
-var myText = myInputBox.onkeyup = function() {myFunction()};
-function  myFunction()
-{
-    
-    console.log(myCan.width, myCan.height);
-    ctx.clearRect(0,0,myCan.width,myCan.height);
-    ctx.drawImage(myImg, 0, 0);
-    ctx.font = "lighter 20px Patrick Hand SC";
+
+var fontFt = {
+    x: 40,
+    y: 94,
+    lineSpacing: 32,
+    fontSize: 25+"px",
+    fontFamily: "Patrick Hand SC"
+};
+
+var imgFt = {
+    imgPATH: "assets/",
+    imgName: "paper.png",
+    imgPosStart: [-66,-56],
+    imgPosEnd: [600,700]
+};
+
+var canvasFt = {
+    position: [0,0],
+    paddingX: 0,
+    paddingY: 0,
+    width: "500px",
+    height: "600px"
+}
+
+// Settings Zone
+var lineSpacingSlider = document.getElementById("slide11");
+var xSlider = document.getElementById("slide12");
+var ySlider = document.getElementById("slide13");
+
+lineSpacingSlider.oninput = function() {
+    fontFt.lineSpacing = lineSpacingSlider.value;
+};
+xSlider.oninput = function() {
+    fontFt.x = xSlider.value;
+};
+ySlider.oninput = function() {
+    fontFt.y = ySlider.value;
+};
+// Scripting
+
+var myImg = new Image();
+myImg.setAttribute("src", imgFt.imgPATH+imgFt.imgName);
+window.onload = function() {
+    ctx.drawImage(myImg, imgFt.imgPosStart[0], imgFt.imgPosStart[1], imgFt.imgPosEnd[0], imgFt.imgPosEnd[1]);
+}
+myInputBox.oninput = function() {updateData();};
+function updateData () {
+    console.log(fontFt.lineSpacing, fontFt.x, fontFt.y);
+    //ctx.clearRect(0,0,myCan.width,myCan.height);
+    ctx.drawImage(myImg, imgFt.imgPosStart[0], imgFt.imgPosStart[1], imgFt.imgPosEnd[0], imgFt.imgPosEnd[1]);
+    ctx.font = fontFt.fontSize+" "+fontFt.fontFamily;
     //ctx.fillText(myInputBox.value, 10, 50);
     var lines = myInputBox.value.split('\n');
     var lineNos = 0;
@@ -33,10 +69,10 @@ function  myFunction()
         while(i<words.length)
         {
             //console.log(Math.ceil(ctx.measureText(myLine + " "+ words[i]).width+20), myCan.width);
-            if(Math.ceil(ctx.measureText(myLine + " "+ words[i]).width+20)>myCan.width)
+            if(Math.ceil(ctx.measureText(myLine + " "+ words[i]).width+72)>myCan.width)
             {
-                console.log("CASE 1: "+myLine);
-                ctx.fillText(myLine, 10, 20 + (lineNos*20));
+                //console.log("CASE 1: "+myLine);
+                ctx.fillText(myLine, fontFt.x, fontFt.y + (lineNos*fontFt.lineSpacing));
                 lineNos++;
                 myLine = words[i];
                 i++;
@@ -49,10 +85,10 @@ function  myFunction()
                 i++;
             }
         }
-        console.log("CASE 2: "+myLine);
-        ctx.fillText(myLine, 10, 20 + (lineNos*20));
+        //console.log("CASE 2: "+myLine);
+        ctx.fillText(myLine, fontFt.x, fontFt.y + (lineNos*fontFt.lineSpacing));
         lineNos++;
     }
     //console.log(myInputBox.value);
     return myInputBox.value;
-}
+};

@@ -229,7 +229,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" id="slide11">
+	<input type="range" min="10" max="200" value="100" steps="1" oninput = "fontFt.lineSpacing = float(this.value)" id="slide11">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -245,7 +245,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" id="slide12">
+	<input type="range" min="10" max="200" value="100" steps="1" oninput = "fontFt.x = float(this.value)" id="slide12">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -262,7 +262,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" id="slide13">
+	<input type="range" min="10" max="200" value="100" steps="1" oninput = "fontFt.y = float(this.value)" id="slide13">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		</div>
 	
 		<div class="canvasArea">
-			<canvas id = "defaultCanvas0" width="600px" height="500px" style="border: 1px solid black;"></canvas>
+			<canvas id = "defaultCanvas0" width="476px" height="544px"></canvas>
 		</div>
 	</div>
 
