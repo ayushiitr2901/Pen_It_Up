@@ -32,7 +32,7 @@ var canvasFt = {
 var lineSpacingSlider = document.getElementById("slide11");
 var xSlider = document.getElementById("slide12");
 var ySlider = document.getElementById("slide13");
-
+/*
 lineSpacingSlider.oninput = function() {
     fontFt.lineSpacing = lineSpacingSlider.value;
 };
@@ -41,7 +41,7 @@ xSlider.oninput = function() {
 };
 ySlider.oninput = function() {
     fontFt.y = ySlider.value;
-};
+};*/
 // Scripting
 
 var myImg = new Image();
