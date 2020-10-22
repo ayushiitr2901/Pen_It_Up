@@ -45,6 +45,10 @@
   color: whitesmoke;
 }
 
+
+
+/*heading and top design*/
+
 .square {
   margin-bottom: 20vh;
   position: relative;
@@ -130,6 +134,11 @@
   margin: 0;
 }
 
+
+
+
+/*project introduction and pencil loading */
+
 .intro {
   width: 50%;
   font-size: 28px;
@@ -185,6 +194,10 @@
     left: 0;
   }
 }
+
+
+
+/*options navbar*/
 
 .nav {
   overflow: visible;
@@ -419,6 +432,11 @@
 .nav__cb:checked ~ .nav__btn:after {
   transform: translateY(-7px) rotate(225deg);
 }
+
+
+
+
+/*automatic adjust button and hidden drawer*/
 
 .auto_option {
   position: relative;
@@ -864,6 +882,10 @@
   }
 }
 
+
+
+/*hidden drawer and range sliders*/
+
 .drawer {
   overflow: visible;
   display: flex;
@@ -1015,6 +1037,11 @@
   background: #664aff; /*this progress background is only shown on Firefox*/
 }
 
+
+
+
+/*text input and output canvas*/
+
 .output {
   /* display: flex; */
   position: relative;
@@ -1052,10 +1079,11 @@
   padding: 2em;
 }
 
-.info {
-  font-size: 40px;
-  width: 50%;
-}
+
+
+
+/*footer menu and ring design*/
+
 
 .footer {
   height: 95vh;

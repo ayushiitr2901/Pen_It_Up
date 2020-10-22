@@ -1,20 +1,24 @@
 var myCan = document.getElementById("defaultCanvas0");
 var ctx = myCan.getContext("2d");
+// var myImg = document.createElement("img");
+var myImg = new Image();
+myImg.setAttribute("src", "assets/paper.png");
+myImg.setAttribute("width", "600");
+myImg.setAttribute("height", "400");
+// document.body.appendChild(myImg);
 window.onload = function() {
-    var myImg = document.createElement("img");
-    myImg.setAttribute("src", "assets/paper.png");
-    myImg.setAttribute("width", "600");
-    myImg.setAttribute("height", "400");
-    document.body.appendChild(myImg);
+
     ctx.drawImage(myImg, 0, 0);
   }
 var myInputBox = document.getElementById("input-box");
 var myText = myInputBox.onkeyup = function() {myFunction()};
 function  myFunction()
 {
+    
     console.log(myCan.width, myCan.height);
     ctx.clearRect(0,0,myCan.width,myCan.height);
-    ctx.font = "20px Patrick Hand SC";
+    ctx.drawImage(myImg, 0, 0);
+    ctx.font = "lighter 20px Patrick Hand SC";
     //ctx.fillText(myInputBox.value, 10, 50);
     var lines = myInputBox.value.split('\n');
     var lineNos = 0;
