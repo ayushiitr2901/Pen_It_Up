@@ -229,7 +229,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.lineSpacing = Number(this.value)" id="slide11">
+	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.lineSpacing = Number(this.value); updateData();" id="slide11">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -245,7 +245,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.x = Number(this.value)" id="slide12">
+	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.x = Number(this.value); updateData();" id="slide12">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -262,7 +262,7 @@
 	<div class="field">
 	  <div class="value left">
 		0</div>	
-	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.y = Number(this.value)" id="slide13">
+	<input type="range" min="10" max="200" value="100" steps="1" onchange = "fontFt.y = Number(this.value); updateData();" id="slide13">
 	  <div class="value right">
 		200</div>
 	</div>
@@ -304,6 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideValue = document.getElementById("span11");
   const inputSlider = document.getElementById("slide11");
   inputSlider.oninput = (()=>{
+	//updateData();
 	let value = inputSlider.value;
 	slideValue.textContent = '\xa0\xa0\xa0'  + value;
 	slideValue.style.left = (value/2) + "%";
@@ -316,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideValue1 = document.getElementById("span12");
   const inputSlider1 = document.getElementById("slide12");
   inputSlider1.oninput = (()=>{
+	//updateData();
 	let value = inputSlider1.value;
 	slideValue1.textContent = '\xa0\xa0\xa0' + value;
 	slideValue1.style.left = (value/2) + "%";
@@ -329,6 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideValue2 = document.getElementById("span13");
   const inputSlider2 = document.getElementById("slide13");
   inputSlider2.oninput = (()=>{
+	//updateData();
 	let value = inputSlider2.value;
 	slideValue2.textContent = '\xa0\xa0\xa0' + value;
 	slideValue2.style.left = (value/2) + "%";
